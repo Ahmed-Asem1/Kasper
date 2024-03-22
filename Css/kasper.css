@@ -1,0 +1,375 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --main-color:#19c8fa;
+}
+.main-color{
+    color: var(--main-color);
+}
+.second-color{
+    color: #777;
+}
+.main-bg-color{
+    background-color: rgb(15 116 143 / 70%);
+}
+.second-bg-color{
+    background-color: var(--main-color);
+}
+/* Component */
+.heading h2{
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.heading h2::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 2px;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.heading h2::after{
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50px;
+    border: 1px solid black;
+    background-color: white;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.heading p {
+    width: 45%;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    color: #777;
+}
+/* Start Landing Section */
+.landing{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../Pictures/landing.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+/* Start Header */
+.navbar .navbar-toggler{
+    background-color: #f0f8ff8f !important;
+    box-shadow: 0 0 0 0;
+}
+@media (min-width:992px){
+    .navbar .container{
+        border-bottom: 1px solid #a2a2a2;
+    }
+}
+@media (max-width:992px){
+    .navbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+}
+.navbar .nav-item .nav-link:hover{
+    color: var(--main-color) !important;
+    /* border-bottom: 0.1px solid var(--main-color) !important; */
+}
+.navbar .nav-item .nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 60px;
+    background-color: var(--main-color);
+    opacity: 0;
+}
+.navbar .nav-item .nav-link:hover:before{
+    opacity: 1;
+}
+.navbar .icon-search::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 2px;
+    height: 30px;
+    background-color: white;
+}
+.navbar .icon-search svg{
+    cursor: pointer;
+}
+/* End Header */
+
+.landing .content{
+    height: calc(100vh - 73px);
+}
+.landing .bg-title{
+    width: 50%;
+}
+@media (max-width:719px){
+    .landing .bg-title{
+        padding: 5px !important;
+    }
+}
+.landing .carousel-indicators{
+    bottom: -80px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.landing .carousel-indicators button{
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 5px !important;
+    border-radius: 50% !important;
+    border: 1px solid white !important;
+    background-color: transparent !important;
+    box-sizing: border-box !important;
+}
+.landing .carousel-indicators button.active{
+    background-color: var(--main-color) !important;
+    border: none !important;
+}
+/* End Landing Section */
+
+/* Start Services Section */
+/* End Services Section */
+
+/* Start Design Section */
+.design{
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../Pictures/design-features.jpg);
+    background-size: cover;
+    height: 80vh;
+    /* margin-bottom: 200px; */
+}
+.design .image{
+    top: 250px;
+}
+.design .row{
+    height: 100%;
+}
+/* End Design Section *
+
+
+/* Start Portfolio Section */
+.portfolio .shuffle ul li{
+    cursor: pointer;
+}
+.portfolio .shuffle ul li.active{
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+}
+.portfolio .box img{
+    transition: 0.4s ease;
+    filter: blur(0);
+}
+.portfolio .box:hover img{
+    transform: rotate(3deg) scale(1.1);
+    filter: blur(2px);
+}
+.portfolio .title {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -100px;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+.portfolio .box:hover .title{
+    bottom: 0;
+}
+/* End Portfolio Section */
+
+/* Start Video Section */
+.video .video-description{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.video .video-description .see-more{
+    cursor: pointer;
+}
+/* End Video Section */
+
+/* Start about Section */
+.about{
+    height: 55vh;
+}
+.about .about-image{
+    position: absolute;
+    top: 200px;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* End about Section */
+
+/* Start Status Section */
+.status{
+    background: linear-gradient(rgba(0,0,0.5),rgba(0,0,0,.5)),url(../Pictures/stats.png);
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:767px){
+    .status .row{
+        /* padding: auto; */
+    }
+}
+.status .icon{
+    width: 45px;
+    height: 45px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+/* End Status Section */
+
+/* Start Our Skills */
+.our-skillls .row img{
+    width: auto;
+    height: 90px;
+}
+@media (max-width:767px){
+    .our-skillls .row img{
+        margin: 0 auto;
+    }
+}
+
+.our-skillls .progress{
+    height: 20px !important;
+}
+.our-skillls .progress-bar{
+    background-color: var(--main-color) !important;
+    font-weight: bold;
+}
+/* End Our Skills */
+
+/* Start Quote Section */
+.quote{
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(../Pictures/quote.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+}
+.quote .quote-text span a {
+    cursor: pointer;
+}
+/* End Quote Section */
+
+/* Start Pricing Section */
+.pricing .header{
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    padding: 20px 0;
+}
+.pricing .header h5::before{
+    content: "$";
+    position: relative;
+    font-size: 22px;
+    top: -20px;
+    left: -10px;
+}
+.pricing .header h5::after{
+    content: "/MO";
+    position: relative;
+    font-size: 22px;
+    right: -8px;
+}
+.pricing .body{
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .body span{
+    width: 60%;
+    margin: 0 auto;
+}
+.pricing .body span:not(:last-child){
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .footer button{
+    border:  1px solid var(--main-color);
+    padding: 10px 15px;
+    transition: .4s;
+}
+.pricing .footer button:hover{
+    background-color: var(--main-color);
+}
+.pricing .contact-us button{
+    transition: .4s;
+}
+.pricing .contact-us button:hover{
+    background-color: white;
+    color: black !important;
+    outline: 1px solid var(--main-color) !important;
+}
+/* End Pricing Section */
+
+/* Start Subscribe Section */
+.subscribe{
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../Pictures/subscribe.jpg);
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+.subscribe .label-mail{
+    width: 60% !important;
+}
+.btn-primary{
+    background-color: white ;
+    color: black;
+    border-color: var(--main-color);
+    transition: .4s;
+}
+.btn-primary:hover{
+    background-color: var(--main-color);
+    color: white;
+    border-color: var(--main-color);
+}
+/* End Subscribe Section */
+
+/* Start Contact Us Section */
+.contact-us .form-control{
+    height: 15vh;
+}
+.form-control:focus{
+    box-shadow: 0 0 0 0 ;
+    outline: 1px solid var(--main-color);
+}
+.contact-us .text address{
+    line-height: 2;
+}
+/* End Contact Us Section */
+
+/* Start Footer */
+footer{
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../Pictures/subscribe.jpg);
+    background-size: cover;
+    height: 60vh;
+}
+footer .row h4{
+    width: 150px;
+}
+/* End Footer */

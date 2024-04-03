@@ -8,6 +8,10 @@ ulShuffle.forEach((li)=>{
 })
 
 
+
+// Start Header Section
+// End Header Section
+
 // Start Section Video
 let aSeeMore = document.querySelector(".see-more");
 aSeeMore.addEventListener("click", ()=>{
@@ -17,17 +21,17 @@ aSeeMore.addEventListener("click", ()=>{
 
 
 // Start Status Section
-let spanCoffeeNumber = document.querySelector(".coffee-number");
-spanCoffeeNumber.innerText = Math.floor(Math.random() * 10000)
+// let spanCoffeeNumber = document.querySelector(".coffee-number");
+// spanCoffeeNumber.innerText = Math.floor(Math.random() * 10000)
 
-let spanCompletedProject = document.querySelector(".completed-project");
-spanCompletedProject.innerText = Math.floor(Math.random() * 100);
+// let spanCompletedProject = document.querySelector(".completed-project");
+// spanCompletedProject.innerText = Math.floor(Math.random() * 100);
 
-let spanMailSent = document.querySelector(".mail-sent");
-spanMailSent.innerText = Math.floor(Math.random() * 1000);
+// let spanMailSent = document.querySelector(".mail-sent");
+// spanMailSent.innerText = Math.floor(Math.random() * 1000);
 
-let spanAwardsReceived = document.querySelector(".awards-received");
-spanAwardsReceived.innerText = Math.floor(Math.random() * 11)
+// let spanAwardsReceived = document.querySelector(".awards-received");
+// spanAwardsReceived.innerText = Math.floor(Math.random() * 11)
 // End Status Section
 
 
